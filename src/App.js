@@ -9,6 +9,10 @@ import { Header } from './components/header'
 import { Balance } from './components/transaction_balance'
 //importing account summary
 import { AccountSummary } from './components/account_summary'
+//importing Transaction History
+import {TransactionHistory} from './components/transaction_history'
+//importing Add Transaction
+import { AddTransaction} from './components/add_transaction'
 
 
 function App() {
@@ -18,6 +22,8 @@ function App() {
       <div className="container">
         <Balance/>
         <AccountSummary/>
+        <TransactionHistory/>
+        <AddTransaction/>
       </div>
     </div>
   );
