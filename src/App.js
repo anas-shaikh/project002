@@ -7,14 +7,17 @@ import './App.css';
 import { Header } from './components/header'
 //importing Transaction balance
 import { Balance } from './components/transaction_balance'
+//importing account summary
+import { AccountSummary } from './components/account_summary'
 
 
 function App() {
   return (
     <div>
       <Header/>
-      <div className="balance">
+      <div className="container">
         <Balance/>
+        <AccountSummary/>
       </div>
     </div>
   );
