@@ -17,7 +17,9 @@ export const AddTransaction = () => {
                     type="text" 
                     id="description" 
                     placeholder="Detail of Transaction"
-                    value={description}/>
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value) }
+                    />
                 </div>
                 <div>
                     <label htmlFor="transactionamount">
@@ -27,7 +29,9 @@ export const AddTransaction = () => {
                     type="number"
                     id="transactionamount"
                     placeholder="Enter Transaction Amount"
-                    value={transactionamount}/>
+                    value={transactionamount}
+                    onChange={(e) => setTransactionAmount(e.target.value) }
+                    />
                 </div>
                 <button className="btn">
                     Add Transaction
