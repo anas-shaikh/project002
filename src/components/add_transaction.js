@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 
 export const AddTransaction = () => {
 
     const [description,setDescription] = useState();
-    Const [transactionamount,setTransactionAmount] = useStat();
+    const [transactionamount,setTransactionAmount] = useState();
 
     return (
         <div>
