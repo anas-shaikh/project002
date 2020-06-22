@@ -1,0 +1,32 @@
+name: Surge Deploy Expence Tracker
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install NodeJS
+      uses:  actions/setup-node@v2-beta
+      with:
+        node_version: '12'
+
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+          cmd: install
+      
+    - name: Build React App
+      run: yarn build
+      
+    - name: Install Surge
+      run: npm install --gloabl surge
+      
+    - name: Deploy to Surge
+      run: surge ./build Project002ET.surge.sh --token ${{SURGE_TOKEN}}
