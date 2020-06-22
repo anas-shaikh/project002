@@ -29,4 +29,4 @@ jobs:
       run: npm install --gloabl surge
       
     - name: Deploy to Surge
-      run: surge ./build Project002ET.surge.sh --token ${{SURGE_TOKEN}}
+      run: surge ./build Project002ET.surge.sh --token ${{secrets.SURGE_TOKEN}}
