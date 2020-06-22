@@ -26,7 +26,7 @@ jobs:
       run: yarn build
       
     - name: Install Surge
-      run: npm install --gloabl surge
+      run: npm install -g surge
       
     - name: Deploy to Surge
       run: surge ./build Project002ET.surge.sh --token ${{secrets.SURGE_TOKEN}}
